@@ -3,12 +3,12 @@
   <div class="container">
     <h4 class="user-bar"><%= current_user.username %>'s coding </h4>
     <div class="coded">
-        <h6> 0 lines coded
+        <h6> <strong id="total-coded">0</strong> lines coded
         <br>
         0 per second</h6>
     </div>
-    <div class="computer">
-      <img src="https://res.cloudinary.com/dgqqot40q/image/upload/v1688122247/computer1_pqknbu.png" alt="80s computer pixel art" class="computer-image"/>
+    <div class="computer" data-controller="code-computer">
+      <img src="https://res.cloudinary.com/dgqqot40q/image/upload/v1688122247/computer1_pqknbu.png" alt="80s computer pixel art" class="computer-image" data-action="click->code-computer#code"/>
     </div>
     <div class="text-center" style="margin-top: 7.5rem">
       <button type="button" class="btn btn-outline-success">Upgrade Computer</button>
