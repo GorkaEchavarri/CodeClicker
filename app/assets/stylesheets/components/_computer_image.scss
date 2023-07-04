@@ -9,4 +9,5 @@
 .computer-image:hover {
   transition: transform .4s ease;
   transform: scale(1.15);
+  cursor: pointer;
 }

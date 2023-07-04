@@ -47,4 +47,5 @@
 .card-product:hover {
   transition: transform .4s ease;
   transform: scale(1.05);
+  cursor: pointer;
 }
