@@ -5,19 +5,64 @@ export default class extends Controller {
 
   connect() {
     console.log("Hello from our first Stimulus controller");
+    this.startRefreshing();
   }
-
 
   initialize() {
     this.total_coded = 0;
+    this.per_second = 0;
+  }
+
+  startRefreshing() {
+    setInterval(() => {
+      // Call the code() function to refresh your code
+      this.generate_lines();
+      // Every second (1000)
+    }, 1000);
   }
 
   code() {
-    const counter = document.getElementById("total-coded")
-
+    const counter = document.getElementById("total-coded");
     this.total_coded += 1;
     // console.log(this.total_coded);
-    // console.log(counter)
+    // console.log(counter);
+    counter.innerText = this.total_coded
+  }
+
+  hire_junior() {
+    const junior = document.getElementById("junior");
+    const per_second = document.getElementById("per-second");
+
+    if (this.total_coded >= 25) {
+      // console.log(junior);
+      this.per_second += 0.5;
+      this.total_coded -= 25;
+      per_second.innerText = this.per_second
+    } else {
+      console.log("Not enought coded")
+    }
+  }
+
+  hire_senior() {
+    const senior = document.getElementById("junior");
+    const per_second = document.getElementById("per-second");
+
+    if (this.total_coded >= 50) {
+      // console.log(junior);
+      this.per_second += 1;
+      this.total_coded -= 50;
+      per_second.innerText = this.per_second
+    } else {
+      console.log("Not enought coded")
+    }
+  }
+
+  generate_lines() {
+    const counter = document.getElementById("total-coded");
+
+    this.total_coded += this.per_second
+    // console.log(this.total_coded);
+    // console.log(this.per_second);
     counter.innerText = this.total_coded
 
   }
