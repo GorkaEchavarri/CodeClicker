@@ -18,7 +18,7 @@ export default class extends Controller {
       // Call the code() function to refresh your code
       this.generate_lines();
       // Every second (1000)
-    }, 1000);
+    }, 500);
   }
 
   code() {
@@ -35,9 +35,9 @@ export default class extends Controller {
 
     if (this.total_coded >= 25) {
       // console.log(junior);
-      this.per_second += 0.5;
+      this.per_second += 0.25;
       this.total_coded -= 25;
-      per_second.innerText = this.per_second
+      per_second.innerText = this.per_second * 2
     } else {
       console.log("Not enought coded")
     }
@@ -49,9 +49,51 @@ export default class extends Controller {
 
     if (this.total_coded >= 50) {
       // console.log(junior);
-      this.per_second += 1;
+      this.per_second += 0.5;
       this.total_coded -= 50;
-      per_second.innerText = this.per_second
+      per_second.innerText = this.per_second * 2
+    } else {
+      console.log("Not enought coded")
+    }
+  }
+
+  hire_startup() {
+    const startup = document.getElementById("startup");
+    const per_second = document.getElementById("per-second");
+
+    if (this.total_coded >= 150) {
+      // console.log(junior);
+      this.per_second += 1.5;
+      this.total_coded -= 150;
+      per_second.innerText = this.per_second * 2
+    } else {
+      console.log("Not enought coded")
+    }
+  }
+
+  hire_company() {
+    const company = document.getElementById("company");
+    const per_second = document.getElementById("per-second");
+
+    if (this.total_coded >= 450) {
+      // console.log(junior);
+      this.per_second += 3;
+      this.total_coded -= 450;
+      per_second.innerText = this.per_second * 2
+    } else {
+      console.log("Not enought coded")
+    }
+  }
+
+  hire_big_tech() {
+    const big_tech = document.getElementById("big-tech");
+    const per_second = document.getElementById("per-second");
+
+    if (this.total_coded >= 450) {
+      // console.log(junior);
+      this.per_second += 3;
+      this.total_coded -= 450;
+      per_second.innerText = this.per_second * 2
     } else {
       console.log("Not enought coded")
     }
