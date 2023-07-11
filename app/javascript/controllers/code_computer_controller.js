@@ -17,7 +17,7 @@ export default class extends Controller {
     setInterval(() => {
       // Call the code() function to refresh your code
       this.generate_lines();
-      // Every second (1000)
+      // Every half second (500)
     }, 500);
   }
 
@@ -121,6 +121,34 @@ export default class extends Controller {
       // console.log(junior);
       this.per_second += 100;
       this.total_coded -= 20000;
+      per_second.innerText = this.per_second * 2
+    } else {
+      console.log("Not enought coded")
+    }
+  }
+
+  hire_coding_star() {
+    const coding_star = document.getElementById("coding-star");
+    const per_second = document.getElementById("per-second");
+
+    if (this.total_coded >= 100000) {
+      // console.log(junior);
+      this.per_second += 400;
+      this.total_coded -= 100000;
+      per_second.innerText = this.per_second * 2
+    } else {
+      console.log("Not enought coded")
+    }
+  }
+
+  hire_architect() {
+    const architect = document.getElementById("architect");
+    const per_second = document.getElementById("per-second");
+
+    if (this.total_coded >= 500000) {
+      // console.log(junior);
+      this.per_second += 1000;
+      this.total_coded -= 500000;
       per_second.innerText = this.per_second * 2
     } else {
       console.log("Not enought coded")
