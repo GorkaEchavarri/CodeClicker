@@ -89,10 +89,38 @@ export default class extends Controller {
     const big_tech = document.getElementById("big-tech");
     const per_second = document.getElementById("per-second");
 
-    if (this.total_coded >= 450) {
+    if (this.total_coded >= 1350) {
       // console.log(junior);
-      this.per_second += 3;
-      this.total_coded -= 450;
+      this.per_second += 9;
+      this.total_coded -= 1350;
+      per_second.innerText = this.per_second * 2
+    } else {
+      console.log("Not enought coded")
+    }
+  }
+
+  hire_quantum_computer() {
+    const quantum_computer = document.getElementById("quantum-computer");
+    const per_second = document.getElementById("per-second");
+
+    if (this.total_coded >= 5000) {
+      // console.log(junior);
+      this.per_second += 25;
+      this.total_coded -= 5000;
+      per_second.innerText = this.per_second * 2
+    } else {
+      console.log("Not enought coded")
+    }
+  }
+
+  hire_ai() {
+    const ai = document.getElementById("AI");
+    const per_second = document.getElementById("per-second");
+
+    if (this.total_coded >= 20000) {
+      // console.log(junior);
+      this.per_second += 100;
+      this.total_coded -= 20000;
       per_second.innerText = this.per_second * 2
     } else {
       console.log("Not enought coded")
