@@ -9,8 +9,10 @@ export default class extends Controller {
   }
 
   initialize() {
-    this.total_coded = 0;
-    this.per_second = 0;
+    this.totalCoded = 0;
+    this.perSecond = 0;
+    this.totalJuniors = 0;
+    this.juniorsPerSecond = 0;
   }
 
   startRefreshing() {
@@ -23,21 +25,27 @@ export default class extends Controller {
 
   code() {
     const counter = document.getElementById("total-coded");
-    this.total_coded += 1;
-    // console.log(this.total_coded);
+    this.totalCoded += 1;
+    // console.log(this.totalCoded);
     // console.log(counter);
-    counter.innerText = this.total_coded
+    counter.innerText = this.totalCoded
   }
 
   hire_junior() {
     const junior = document.getElementById("junior");
-    const per_second = document.getElementById("per-second");
+    const perSecond = document.getElementById("per-second");
+    const totalJuniors = document.getElementById("total-juniors");
+    const codingJuniors = document.getElementById("coding-juniors");
 
-    if (this.total_coded >= 25) {
+    if (this.totalCoded >= 25) {
       // console.log(junior);
-      this.per_second += 0.25;
-      this.total_coded -= 25;
-      per_second.innerText = this.per_second * 2
+      this.perSecond += 0.25;
+      this.totalCoded -= 25;
+      this.totalJuniors += 1;
+      this.codingJuniors += 1;
+      perSecond.innerText = this.perSecond * 2
+      totalJuniors.innerText = this.totalJuniors
+      codingJuniors.innerText = this.totalJuniors * 0.5
     } else {
       console.log("Not enought coded")
     }
@@ -45,13 +53,13 @@ export default class extends Controller {
 
   hire_senior() {
     const senior = document.getElementById("junior");
-    const per_second = document.getElementById("per-second");
+    const perSecond = document.getElementById("per-second");
 
-    if (this.total_coded >= 50) {
+    if (this.totalCoded >= 50) {
       // console.log(junior);
-      this.per_second += 0.5;
-      this.total_coded -= 50;
-      per_second.innerText = this.per_second * 2
+      this.perSecond += 0.5;
+      this.totalCoded -= 50;
+      perSecond.innerText = this.perSecond * 2
     } else {
       console.log("Not enought coded")
     }
@@ -59,13 +67,13 @@ export default class extends Controller {
 
   hire_startup() {
     const startup = document.getElementById("startup");
-    const per_second = document.getElementById("per-second");
+    const perSecond = document.getElementById("per-second");
 
-    if (this.total_coded >= 150) {
+    if (this.totalCoded >= 150) {
       // console.log(junior);
-      this.per_second += 1.5;
-      this.total_coded -= 150;
-      per_second.innerText = this.per_second * 2
+      this.perSecond += 1.5;
+      this.totalCoded -= 150;
+      perSecond.innerText = this.perSecond * 2
     } else {
       console.log("Not enought coded")
     }
@@ -73,13 +81,13 @@ export default class extends Controller {
 
   hire_company() {
     const company = document.getElementById("company");
-    const per_second = document.getElementById("per-second");
+    const perSecond = document.getElementById("per-second");
 
-    if (this.total_coded >= 450) {
+    if (this.totalCoded >= 450) {
       // console.log(junior);
-      this.per_second += 3;
-      this.total_coded -= 450;
-      per_second.innerText = this.per_second * 2
+      this.perSecond += 3;
+      this.totalCoded -= 450;
+      perSecond.innerText = this.perSecond * 2
     } else {
       console.log("Not enought coded")
     }
@@ -87,13 +95,13 @@ export default class extends Controller {
 
   hire_big_tech() {
     const big_tech = document.getElementById("big-tech");
-    const per_second = document.getElementById("per-second");
+    const perSecond = document.getElementById("per-second");
 
-    if (this.total_coded >= 1350) {
+    if (this.totalCoded >= 1350) {
       // console.log(junior);
-      this.per_second += 9;
-      this.total_coded -= 1350;
-      per_second.innerText = this.per_second * 2
+      this.perSecond += 9;
+      this.totalCoded -= 1350;
+      perSecond.innerText = this.perSecond * 2
     } else {
       console.log("Not enought coded")
     }
@@ -101,13 +109,13 @@ export default class extends Controller {
 
   hire_quantum_computer() {
     const quantum_computer = document.getElementById("quantum-computer");
-    const per_second = document.getElementById("per-second");
+    const perSecond = document.getElementById("per-second");
 
-    if (this.total_coded >= 5000) {
+    if (this.totalCoded >= 5000) {
       // console.log(junior);
-      this.per_second += 25;
-      this.total_coded -= 5000;
-      per_second.innerText = this.per_second * 2
+      this.perSecond += 25;
+      this.totalCoded -= 5000;
+      perSecond.innerText = this.perSecond * 2
     } else {
       console.log("Not enought coded")
     }
@@ -115,13 +123,13 @@ export default class extends Controller {
 
   hire_ai() {
     const ai = document.getElementById("AI");
-    const per_second = document.getElementById("per-second");
+    const perSecond = document.getElementById("per-second");
 
-    if (this.total_coded >= 20000) {
+    if (this.totalCoded >= 20000) {
       // console.log(junior);
-      this.per_second += 100;
-      this.total_coded -= 20000;
-      per_second.innerText = this.per_second * 2
+      this.perSecond += 100;
+      this.totalCoded -= 20000;
+      perSecond.innerText = this.perSecond * 2
     } else {
       console.log("Not enought coded")
     }
@@ -129,13 +137,13 @@ export default class extends Controller {
 
   hire_coding_star() {
     const coding_star = document.getElementById("coding-star");
-    const per_second = document.getElementById("per-second");
+    const perSecond = document.getElementById("per-second");
 
-    if (this.total_coded >= 100000) {
+    if (this.totalCoded >= 100000) {
       // console.log(junior);
-      this.per_second += 400;
-      this.total_coded -= 100000;
-      per_second.innerText = this.per_second * 2
+      this.perSecond += 400;
+      this.totalCoded -= 100000;
+      perSecond.innerText = this.perSecond * 2
     } else {
       console.log("Not enought coded")
     }
@@ -143,13 +151,13 @@ export default class extends Controller {
 
   hire_architect() {
     const architect = document.getElementById("architect");
-    const per_second = document.getElementById("per-second");
+    const perSecond = document.getElementById("per-second");
 
-    if (this.total_coded >= 500000) {
+    if (this.totalCoded >= 500000) {
       // console.log(junior);
-      this.per_second += 1000;
-      this.total_coded -= 500000;
-      per_second.innerText = this.per_second * 2
+      this.perSecond += 1000;
+      this.totalCoded -= 500000;
+      perSecond.innerText = this.perSecond * 2
     } else {
       console.log("Not enought coded")
     }
@@ -158,10 +166,10 @@ export default class extends Controller {
   generate_lines() {
     const counter = document.getElementById("total-coded");
 
-    this.total_coded += this.per_second
-    // console.log(this.total_coded);
-    // console.log(this.per_second);
-    counter.innerText = this.total_coded
+    this.totalCoded += this.perSecond
+    // console.log(this.totalCoded);
+    // console.log(this.perSecond);
+    counter.innerText = this.totalCoded
 
   }
 }
