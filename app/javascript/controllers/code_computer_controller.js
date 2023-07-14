@@ -12,7 +12,14 @@ export default class extends Controller {
     this.totalCoded = 0;
     this.perSecond = 0;
     this.totalJuniors = 0;
-    this.juniorsPerSecond = 0;
+    this.totalSeniors = 0;
+    this.totalStartups = 0;
+    this.totalCompanies = 0;
+    this.totalBigtechs = 0;
+    this.totalAIs = 0;
+    this.totalQuantum = 0;
+    this.totalStars = 0;
+    this.totalArchitects = 0;
   }
 
   startRefreshing() {
@@ -42,7 +49,6 @@ export default class extends Controller {
       this.perSecond += 0.25;
       this.totalCoded -= 25;
       this.totalJuniors += 1;
-      this.codingJuniors += 1;
       perSecond.innerText = this.perSecond * 2
       totalJuniors.innerText = this.totalJuniors
       codingJuniors.innerText = this.totalJuniors * 0.5
@@ -54,12 +60,18 @@ export default class extends Controller {
   hire_senior() {
     const senior = document.getElementById("junior");
     const perSecond = document.getElementById("per-second");
+    const totalSeniors = document.getElementById("total-seniors");
+    const codingSeniors = document.getElementById("coding-seniors");
 
     if (this.totalCoded >= 50) {
       // console.log(junior);
       this.perSecond += 0.5;
       this.totalCoded -= 50;
+      this.totalSeniors += 1;
+      this.codingSeniors += 1;
       perSecond.innerText = this.perSecond * 2
+      totalSeniors.innerText = this.totalSeniors
+      codingSeniors.innerText = this.totalSeniors * 1
     } else {
       console.log("Not enought coded")
     }
