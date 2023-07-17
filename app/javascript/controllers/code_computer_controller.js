@@ -25,7 +25,7 @@ export default class extends Controller {
   startRefreshing() {
     setInterval(() => {
       // Call the code() function to refresh your code
-      this.generate_lines();
+      this.generateLines();
       // Every half second (500)
     }, 500);
   }
@@ -38,7 +38,7 @@ export default class extends Controller {
     counter.innerText = this.totalCoded
   }
 
-  hire_junior() {
+  hireJunior() {
     const perSecond = document.getElementById("per-second");
     const totalJuniors = document.getElementById("total-juniors");
     const codingJuniors = document.getElementById("coding-juniors");
@@ -55,7 +55,7 @@ export default class extends Controller {
     }
   }
 
-  hire_senior() {
+  hireSenior() {
     const perSecond = document.getElementById("per-second");
     const totalSeniors = document.getElementById("total-seniors");
     const codingSeniors = document.getElementById("coding-seniors");
@@ -72,7 +72,7 @@ export default class extends Controller {
     }
   }
 
-  hire_startup() {
+  hireStartup() {
     const perSecond = document.getElementById("per-second");
     const totalStartups = document.getElementById("total-startups");
     const codingStartups = document.getElementById("coding-startups");
@@ -89,7 +89,7 @@ export default class extends Controller {
     }
   }
 
-  hire_company() {
+  hireCompany() {
     const perSecond = document.getElementById("per-second");
     const totalCompanies = document.getElementById("total-companies");
     const codingCompanies = document.getElementById("coding-companies");
@@ -106,7 +106,7 @@ export default class extends Controller {
     }
   }
 
-  hire_big_tech() {
+  hireBigTech() {
     const perSecond = document.getElementById("per-second");
     const totalBigtechs = document.getElementById("total-bigtechs");
     const codingBigtechs = document.getElementById("coding-bigtechs");
@@ -123,7 +123,7 @@ export default class extends Controller {
     }
   }
 
-  hire_quantum_computer() {
+  hireQuantumComputer() {
     const perSecond = document.getElementById("per-second");
     const totalQuantum = document.getElementById("total-quantum");
     const codingQuantum = document.getElementById("coding-quantum");
@@ -140,7 +140,7 @@ export default class extends Controller {
     }
   }
 
-  hire_ai() {
+  hireAi() {
     const perSecond = document.getElementById("per-second");
     const totalAIs = document.getElementById("total-ais");
     const codingais = document.getElementById("coding-ais");
@@ -157,7 +157,7 @@ export default class extends Controller {
     }
   }
 
-  hire_coding_star() {
+  hireCodingStar() {
     const perSecond = document.getElementById("per-second");
     const totalStars = document.getElementById("total-stars");
     const codingStars = document.getElementById("coding-stars");
@@ -175,7 +175,7 @@ export default class extends Controller {
     }
   }
 
-  hire_architect() {
+  hireArchitect() {
     const perSecond = document.getElementById("per-second");
     const totalArchitects = document.getElementById("total-architects");
     const codingArchitects = document.getElementById("coding-architects");
@@ -193,7 +193,7 @@ export default class extends Controller {
     }
   }
 
-  generate_lines() {
+  generateLines() {
     const counter = document.getElementById("total-coded");
 
     this.totalCoded += this.perSecond
