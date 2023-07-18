@@ -4,6 +4,10 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  position: absolute;
+  left: 100px;
+  top: 0px;
+  z-index: 2;
 }
 
 .computer-image:hover {
