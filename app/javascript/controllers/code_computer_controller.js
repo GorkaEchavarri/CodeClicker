@@ -43,6 +43,23 @@ export default class extends Controller {
     const totalJuniors = document.getElementById("total-juniors");
     const codingJuniors = document.getElementById("coding-juniors");
 
+    // Create a random junior image
+    const juniorImage = document.createElement('img');
+    juniorImage.src = 'https://res.cloudinary.com/dgqqot40q/image/upload/v1688378808/Screenshot_2023-07-03_at_11.06.08_d6g5cs.png';
+    juniorImage.className = 'junior-image';
+
+    // Calculate random positions within the container
+    const container = document.getElementById('stats-container');
+    const containerWidth = container.clientWidth;
+    const containerHeight = container.clientHeight;
+    const randomX = Math.floor(Math.random() * (containerWidth - 50));
+    const randomY = Math.floor(Math.random() * (containerHeight - 50));
+
+    // Set the position of the image
+    juniorImage.style.position = 'absolute';
+    juniorImage.style.left = randomX + 'px';
+    juniorImage.style.top = randomY + 'px';
+
     if (this.totalCoded >= 25) {
       this.perSecond += 0.25;
       this.totalCoded -= 25;
@@ -50,6 +67,8 @@ export default class extends Controller {
       perSecond.innerText = this.perSecond * 2
       totalJuniors.innerText = this.totalJuniors
       codingJuniors.innerText = this.totalJuniors * 0.5
+      // Append the image to the container
+      container.appendChild(juniorImage);
     } else {
       console.log("Not enought coded")
     }
