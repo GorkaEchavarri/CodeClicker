@@ -6,12 +6,15 @@
 
 .container {
  background-color: #F7F1E5;
+ display: flex;
+ flex-direction: column;
 }
 
 .my-container {
   justify-content: center;
 }
 
-#stats-container {
+#pics-container {
+  flex-grow: 1;
   position: relative;
 }

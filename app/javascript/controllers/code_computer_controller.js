@@ -46,10 +46,10 @@ export default class extends Controller {
     // Create a random junior image
     const juniorImage = document.createElement('img');
     juniorImage.src = 'https://res.cloudinary.com/dgqqot40q/image/upload/v1688378808/Screenshot_2023-07-03_at_11.06.08_d6g5cs.png';
-    juniorImage.className = 'junior-image';
+    juniorImage.className = 'random-image';
 
     // Calculate random positions within the container
-    const container = document.getElementById('stats-container');
+    const container = document.getElementById('pics-container');
     const containerWidth = container.clientWidth;
     const containerHeight = container.clientHeight;
     const randomX = Math.floor(Math.random() * (containerWidth - 50));
@@ -79,6 +79,23 @@ export default class extends Controller {
     const totalSeniors = document.getElementById("total-seniors");
     const codingSeniors = document.getElementById("coding-seniors");
 
+    // Create a random senior image
+    const seniorImage = document.createElement('img');
+    seniorImage.src = 'https://res.cloudinary.com/dgqqot40q/image/upload/v1689679926/senior-dev_fhxjfd.png';
+    seniorImage.className = 'random-image';
+
+    // Calculate random positions within the container
+    const container = document.getElementById('pics-container');
+    const containerWidth = container.clientWidth;
+    const containerHeight = container.clientHeight;
+    const randomX = Math.floor(Math.random() * (containerWidth - 50));
+    const randomY = Math.floor(Math.random() * (containerHeight - 50));
+
+    // Set the position of the image
+    seniorImage.style.position = 'absolute';
+    seniorImage.style.left = randomX + 'px';
+    seniorImage.style.top = randomY + 'px';
+
     if (this.totalCoded >= 50) {
       this.perSecond += 0.5;
       this.totalCoded -= 50;
@@ -86,6 +103,8 @@ export default class extends Controller {
       perSecond.innerText = this.perSecond * 2
       totalSeniors.innerText = this.totalSeniors
       codingSeniors.innerText = this.totalSeniors * 1
+      // Append the image to the container
+      container.appendChild(seniorImage);
     } else {
       console.log("Not enought coded")
     }
