@@ -115,6 +115,23 @@ export default class extends Controller {
     const totalStartups = document.getElementById("total-startups");
     const codingStartups = document.getElementById("coding-startups");
 
+    // Create a random startup image
+    const startupImage = document.createElement('img');
+    startupImage.src = 'https://res.cloudinary.com/dgqqot40q/image/upload/v1688382257/Screenshot_2023-07-03_at_12.03.54_fknigd.png';
+    startupImage.className = 'random-image';
+
+    // Calculate random positions within the container
+    const container = document.getElementById('pics-container');
+    const containerWidth = container.clientWidth;
+    const containerHeight = container.clientHeight;
+    const randomX = Math.floor(Math.random() * (containerWidth - 50));
+    const randomY = Math.floor(Math.random() * (containerHeight - 50));
+
+    // Set the position of the image
+    startupImage.style.position = 'absolute';
+    startupImage.style.left = randomX + 'px';
+    startupImage.style.top = randomY + 'px';
+
     if (this.totalCoded >= 150) {
       this.perSecond += 1.5;
       this.totalCoded -= 150;
@@ -122,6 +139,8 @@ export default class extends Controller {
       perSecond.innerText = this.perSecond * 2
       totalStartups.innerText = this.totalStartups
       codingStartups.innerText = this.totalStartups * 3
+      // Append the image to the container
+      container.appendChild(startupImage);
     } else {
       console.log("Not enought coded")
     }
@@ -132,6 +151,23 @@ export default class extends Controller {
     const totalCompanies = document.getElementById("total-companies");
     const codingCompanies = document.getElementById("coding-companies");
 
+    // Create a random company image
+    const companyImage = document.createElement('img');
+    companyImage.src = 'https://res.cloudinary.com/dgqqot40q/image/upload/v1688379727/Screenshot_2023-07-03_at_11.12.35_qspn3i.png';
+    companyImage.className = 'random-image';
+
+    // Calculate random positions within the container
+    const container = document.getElementById('pics-container');
+    const containerWidth = container.clientWidth;
+    const containerHeight = container.clientHeight;
+    const randomX = Math.floor(Math.random() * (containerWidth - 50));
+    const randomY = Math.floor(Math.random() * (containerHeight - 50));
+
+    // Set the position of the image
+    companyImage.style.position = 'absolute';
+    companyImage.style.left = randomX + 'px';
+    companyImage.style.top = randomY + 'px';
+
     if (this.totalCoded >= 450) {
       this.perSecond += 3;
       this.totalCoded -= 450;
@@ -139,6 +175,8 @@ export default class extends Controller {
       perSecond.innerText = this.perSecond * 2
       totalCompanies.innerText = this.totalCompanies
       codingCompanies.innerText = this.totalCompanies * 6
+      // Append the image to the container
+      container.appendChild(companyImage);
     } else {
       console.log("Not enought coded")
     }
@@ -149,6 +187,23 @@ export default class extends Controller {
     const totalBigtechs = document.getElementById("total-bigtechs");
     const codingBigtechs = document.getElementById("coding-bigtechs");
 
+    // Create a random bigtech image
+    const bigTechImage = document.createElement('img');
+    bigTechImage.src = 'https://res.cloudinary.com/dgqqot40q/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1688380161/Screenshot_2023-07-03_at_11.23.33_lw0j4e.png';
+    bigTechImage.className = 'random-image';
+
+    // Calculate random positions within the container
+    const container = document.getElementById('pics-container');
+    const containerWidth = container.clientWidth;
+    const containerHeight = container.clientHeight;
+    const randomX = Math.floor(Math.random() * (containerWidth - 50));
+    const randomY = Math.floor(Math.random() * (containerHeight - 50));
+
+    // Set the position of the image
+    bigTechImage.style.position = 'absolute';
+    bigTechImage.style.left = randomX + 'px';
+    bigTechImage.style.top = randomY + 'px';
+
     if (this.totalCoded >= 1350) {
       this.perSecond += 9;
       this.totalCoded -= 1350;
@@ -156,6 +211,8 @@ export default class extends Controller {
       perSecond.innerText = this.perSecond * 2
       totalBigtechs.innerText = this.totalBigtechs
       codingBigtechs.innerText = this.totalBigtechs * 18
+      // Append the image to the container
+      container.appendChild(bigTechImage);
     } else {
       console.log("Not enought coded")
     }
@@ -166,6 +223,23 @@ export default class extends Controller {
     const totalQuantum = document.getElementById("total-quantum");
     const codingQuantum = document.getElementById("coding-quantum");
 
+    // Create a random quantumComputer image
+    const quantumComputerImage = document.createElement('img');
+    quantumComputerImage.src = 'https://res.cloudinary.com/dgqqot40q/image/upload/v1689681658/EDxIonhUEAI9Tz8_ta2zvd.jpg';
+    quantumComputerImage.className = 'random-image';
+
+    // Calculate random positions within the container
+    const container = document.getElementById('pics-container');
+    const containerWidth = container.clientWidth;
+    const containerHeight = container.clientHeight;
+    const randomX = Math.floor(Math.random() * (containerWidth - 50));
+    const randomY = Math.floor(Math.random() * (containerHeight - 50));
+
+    // Set the position of the image
+    quantumComputerImage.style.position = 'absolute';
+    quantumComputerImage.style.left = randomX + 'px';
+    quantumComputerImage.style.top = randomY + 'px';
+
     if (this.totalCoded >= 5000) {
       this.perSecond += 25;
       this.totalCoded -= 5000;
@@ -173,6 +247,8 @@ export default class extends Controller {
       perSecond.innerText = this.perSecond * 2
       totalQuantum.innerText = this.totalQuantum
       codingQuantum.innerText = this.totalQuantum * 50
+      // Append the image to the container
+      container.appendChild(quantumComputerImage);
     } else {
       console.log("Not enought coded")
     }
@@ -183,6 +259,23 @@ export default class extends Controller {
     const totalAIs = document.getElementById("total-ais");
     const codingais = document.getElementById("coding-ais");
 
+    // Create a random AI image
+    const AIImage = document.createElement('img');
+    AIImage.src = 'https://res.cloudinary.com/dgqqot40q/image/upload/v1688380978/Screenshot_2023-07-03_at_11.40.58_q1ekk3.png';
+    AIImage.className = 'random-image';
+
+    // Calculate random positions within the container
+    const container = document.getElementById('pics-container');
+    const containerWidth = container.clientWidth;
+    const containerHeight = container.clientHeight;
+    const randomX = Math.floor(Math.random() * (containerWidth - 50));
+    const randomY = Math.floor(Math.random() * (containerHeight - 50));
+
+    // Set the position of the image
+    AIImage.style.position = 'absolute';
+    AIImage.style.left = randomX + 'px';
+    AIImage.style.top = randomY + 'px';
+
     if (this.totalCoded >= 20000) {
       this.perSecond += 100;
       this.totalCoded -= 20000;
@@ -190,6 +283,8 @@ export default class extends Controller {
       perSecond.innerText = this.perSecond * 2
       totalAIs.innerText = this.totalAIs
       codingais.innerText = this.totalAIs * 200
+      // Append the image to the container
+      container.appendChild(AIImage);
     } else {
       console.log("Not enought coded")
     }
@@ -200,14 +295,32 @@ export default class extends Controller {
     const totalStars = document.getElementById("total-stars");
     const codingStars = document.getElementById("coding-stars");
 
+    // Create a random codingStar image
+    const codingStarImage = document.createElement('img');
+    codingStarImage.src = 'https://res.cloudinary.com/dgqqot40q/image/upload/v1688381695/code-star_rhmuof.png';
+    codingStarImage.className = 'random-image';
+
+    // Calculate random positions within the container
+    const container = document.getElementById('pics-container');
+    const containerWidth = container.clientWidth;
+    const containerHeight = container.clientHeight;
+    const randomX = Math.floor(Math.random() * (containerWidth - 50));
+    const randomY = Math.floor(Math.random() * (containerHeight - 50));
+
+    // Set the position of the image
+    codingStarImage.style.position = 'absolute';
+    codingStarImage.style.left = randomX + 'px';
+    codingStarImage.style.top = randomY + 'px';
+
     if (this.totalCoded >= 100000) {
-      // console.log(junior);
       this.perSecond += 400;
       this.totalCoded -= 100000;
       this.totalStars += 1;
       perSecond.innerText = this.perSecond * 2
       totalStars.innerText = this.totalStars
       codingStars.innerText = this.totalStars * 800
+      // Append the image to the container
+      container.appendChild(codingStarImage);
     } else {
       console.log("Not enought coded")
     }
@@ -218,14 +331,32 @@ export default class extends Controller {
     const totalArchitects = document.getElementById("total-architects");
     const codingArchitects = document.getElementById("coding-architects");
 
+    // Create a random architect image
+    const architectImage = document.createElement('img');
+    architectImage.src = 'https://res.cloudinary.com/dgqqot40q/image/upload/v1688380308/architect_z2rev3.webp';
+    architectImage.className = 'random-image';
+
+    // Calculate random positions within the container
+    const container = document.getElementById('pics-container');
+    const containerWidth = container.clientWidth;
+    const containerHeight = container.clientHeight;
+    const randomX = Math.floor(Math.random() * (containerWidth - 50));
+    const randomY = Math.floor(Math.random() * (containerHeight - 50));
+
+    // Set the position of the image
+    architectImage.style.position = 'absolute';
+    architectImage.style.left = randomX + 'px';
+    architectImage.style.top = randomY + 'px';
+
     if (this.totalCoded >= 500000) {
-      // console.log(junior);
       this.perSecond += 1000;
       this.totalCoded -= 500000;
       this.totalArchitects += 1;
       perSecond.innerText = this.perSecond * 2
       totalArchitects.innerText = this.totalArchitects
       codingArchitects.innerText = this.totalArchitects * 2000
+      // Append the image to the container
+      container.appendChild(architectImage);
     } else {
       console.log("Not enought coded")
     }
