@@ -32,9 +32,9 @@ export default class extends Controller {
 
   code() {
     const counter = document.getElementById("total-coded");
+    const junior = document.getElementById("junior");
     this.totalCoded += 1;
-    // console.log(this.totalCoded);
-    // console.log(counter);
+    junior.style.visibility = "visible";
     counter.innerText = this.totalCoded
   }
 
@@ -42,6 +42,7 @@ export default class extends Controller {
     const perSecond = document.getElementById("per-second");
     const totalJuniors = document.getElementById("total-juniors");
     const codingJuniors = document.getElementById("coding-juniors");
+    const senior = document.getElementById("senior");
 
     // Create a random junior image
     const juniorImage = document.createElement('img');
@@ -67,6 +68,7 @@ export default class extends Controller {
       perSecond.innerText = this.perSecond * 2
       totalJuniors.innerText = this.totalJuniors
       codingJuniors.innerText = this.totalJuniors * 0.5
+      senior.style.visibility = "visible";
       // Append the image to the container
       container.appendChild(juniorImage);
     } else {
@@ -78,6 +80,7 @@ export default class extends Controller {
     const perSecond = document.getElementById("per-second");
     const totalSeniors = document.getElementById("total-seniors");
     const codingSeniors = document.getElementById("coding-seniors");
+    const startup = document.getElementById("startup");
 
     // Create a random senior image
     const seniorImage = document.createElement('img');
@@ -103,6 +106,7 @@ export default class extends Controller {
       perSecond.innerText = this.perSecond * 2
       totalSeniors.innerText = this.totalSeniors
       codingSeniors.innerText = this.totalSeniors * 1
+      startup.style.visibility = "visible";
       // Append the image to the container
       container.appendChild(seniorImage);
     } else {
@@ -114,6 +118,7 @@ export default class extends Controller {
     const perSecond = document.getElementById("per-second");
     const totalStartups = document.getElementById("total-startups");
     const codingStartups = document.getElementById("coding-startups");
+    const company = document.getElementById("company");
 
     // Create a random startup image
     const startupImage = document.createElement('img');
@@ -139,6 +144,7 @@ export default class extends Controller {
       perSecond.innerText = this.perSecond * 2
       totalStartups.innerText = this.totalStartups
       codingStartups.innerText = this.totalStartups * 3
+      company.style.visibility = "visible";
       // Append the image to the container
       container.appendChild(startupImage);
     } else {
@@ -150,6 +156,7 @@ export default class extends Controller {
     const perSecond = document.getElementById("per-second");
     const totalCompanies = document.getElementById("total-companies");
     const codingCompanies = document.getElementById("coding-companies");
+    const bigtech = document.getElementById("big-tech");
 
     // Create a random company image
     const companyImage = document.createElement('img');
@@ -175,6 +182,7 @@ export default class extends Controller {
       perSecond.innerText = this.perSecond * 2
       totalCompanies.innerText = this.totalCompanies
       codingCompanies.innerText = this.totalCompanies * 6
+      bigtech.style.visibility = "visible";
       // Append the image to the container
       container.appendChild(companyImage);
     } else {
@@ -186,6 +194,7 @@ export default class extends Controller {
     const perSecond = document.getElementById("per-second");
     const totalBigtechs = document.getElementById("total-bigtechs");
     const codingBigtechs = document.getElementById("coding-bigtechs");
+    const quantum_computer = document.getElementById("quantum-computer");
 
     // Create a random bigtech image
     const bigTechImage = document.createElement('img');
@@ -211,6 +220,7 @@ export default class extends Controller {
       perSecond.innerText = this.perSecond * 2
       totalBigtechs.innerText = this.totalBigtechs
       codingBigtechs.innerText = this.totalBigtechs * 18
+      quantum_computer.style.visibility = "visible";
       // Append the image to the container
       container.appendChild(bigTechImage);
     } else {
@@ -222,6 +232,7 @@ export default class extends Controller {
     const perSecond = document.getElementById("per-second");
     const totalQuantum = document.getElementById("total-quantum");
     const codingQuantum = document.getElementById("coding-quantum");
+    const AI = document.getElementById("AI");
 
     // Create a random quantumComputer image
     const quantumComputerImage = document.createElement('img');
@@ -247,6 +258,7 @@ export default class extends Controller {
       perSecond.innerText = this.perSecond * 2
       totalQuantum.innerText = this.totalQuantum
       codingQuantum.innerText = this.totalQuantum * 50
+      AI.style.visibility = "visible";
       // Append the image to the container
       container.appendChild(quantumComputerImage);
     } else {
@@ -258,6 +270,7 @@ export default class extends Controller {
     const perSecond = document.getElementById("per-second");
     const totalAIs = document.getElementById("total-ais");
     const codingais = document.getElementById("coding-ais");
+    const coding_star = document.getElementById("coding-star");
 
     // Create a random AI image
     const AIImage = document.createElement('img');
@@ -283,6 +296,7 @@ export default class extends Controller {
       perSecond.innerText = this.perSecond * 2
       totalAIs.innerText = this.totalAIs
       codingais.innerText = this.totalAIs * 200
+      coding_star.style.visibility = "visible";
       // Append the image to the container
       container.appendChild(AIImage);
     } else {
@@ -294,6 +308,7 @@ export default class extends Controller {
     const perSecond = document.getElementById("per-second");
     const totalStars = document.getElementById("total-stars");
     const codingStars = document.getElementById("coding-stars");
+    const architect = document.getElementById("architect");
 
     // Create a random codingStar image
     const codingStarImage = document.createElement('img');
@@ -319,6 +334,7 @@ export default class extends Controller {
       perSecond.innerText = this.perSecond * 2
       totalStars.innerText = this.totalStars
       codingStars.innerText = this.totalStars * 800
+      architect.style.visibility = "visible";
       // Append the image to the container
       container.appendChild(codingStarImage);
     } else {
