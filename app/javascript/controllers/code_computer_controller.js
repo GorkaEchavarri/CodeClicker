@@ -10,6 +10,7 @@ export default class extends Controller {
 
   initialize() {
     this.totalCoded = 0;
+    this.manually_coded = 0;
     this.perSecond = 0;
     this.totalJuniors = 0;
     this.totalSeniors = 0;
@@ -33,7 +34,12 @@ export default class extends Controller {
   code() {
     const counter = document.getElementById("total-coded");
     const junior = document.getElementById("junior");
+    const manually_coded = document.getElementById("manually-coded");
+
     this.totalCoded += 1;
+    this.manually_coded += 1;
+    manually_coded.innerText = this.manually_coded
+    // To make visible first item in store
     junior.style.visibility = "visible";
     counter.innerText = this.totalCoded
   }
@@ -68,6 +74,7 @@ export default class extends Controller {
       perSecond.innerText = this.perSecond * 2
       totalJuniors.innerText = this.totalJuniors
       codingJuniors.innerText = this.totalJuniors * 0.5
+      // To make visible next item in store
       senior.style.visibility = "visible";
       // Append the image to the container
       container.appendChild(juniorImage);
@@ -106,6 +113,7 @@ export default class extends Controller {
       perSecond.innerText = this.perSecond * 2
       totalSeniors.innerText = this.totalSeniors
       codingSeniors.innerText = this.totalSeniors * 1
+      // To make visible next item in store
       startup.style.visibility = "visible";
       // Append the image to the container
       container.appendChild(seniorImage);
@@ -144,6 +152,7 @@ export default class extends Controller {
       perSecond.innerText = this.perSecond * 2
       totalStartups.innerText = this.totalStartups
       codingStartups.innerText = this.totalStartups * 3
+      // To make visible next item in store
       company.style.visibility = "visible";
       // Append the image to the container
       container.appendChild(startupImage);
@@ -182,6 +191,7 @@ export default class extends Controller {
       perSecond.innerText = this.perSecond * 2
       totalCompanies.innerText = this.totalCompanies
       codingCompanies.innerText = this.totalCompanies * 6
+      // To make visible next item in store
       bigtech.style.visibility = "visible";
       // Append the image to the container
       container.appendChild(companyImage);
@@ -220,6 +230,7 @@ export default class extends Controller {
       perSecond.innerText = this.perSecond * 2
       totalBigtechs.innerText = this.totalBigtechs
       codingBigtechs.innerText = this.totalBigtechs * 18
+      // To make visible next item in store
       quantum_computer.style.visibility = "visible";
       // Append the image to the container
       container.appendChild(bigTechImage);
@@ -258,6 +269,7 @@ export default class extends Controller {
       perSecond.innerText = this.perSecond * 2
       totalQuantum.innerText = this.totalQuantum
       codingQuantum.innerText = this.totalQuantum * 50
+      // To make visible next item in store
       AI.style.visibility = "visible";
       // Append the image to the container
       container.appendChild(quantumComputerImage);
@@ -296,6 +308,7 @@ export default class extends Controller {
       perSecond.innerText = this.perSecond * 2
       totalAIs.innerText = this.totalAIs
       codingais.innerText = this.totalAIs * 200
+      // To make visible next item in store
       coding_star.style.visibility = "visible";
       // Append the image to the container
       container.appendChild(AIImage);
@@ -332,8 +345,10 @@ export default class extends Controller {
       this.totalCoded -= 100000;
       this.totalStars += 1;
       perSecond.innerText = this.perSecond * 2
+
       totalStars.innerText = this.totalStars
       codingStars.innerText = this.totalStars * 800
+      // Makes visible next item in store
       architect.style.visibility = "visible";
       // Append the image to the container
       container.appendChild(codingStarImage);
@@ -380,11 +395,16 @@ export default class extends Controller {
 
   generateLines() {
     const counter = document.getElementById("total-coded");
+    const perSecondElement = document.getElementById("per-second");
 
-    this.totalCoded += this.perSecond
-    // console.log(this.totalCoded);
-    // console.log(this.perSecond);
-    counter.innerText = this.totalCoded
+    this.totalCoded += this.perSecond;
 
+    // Format the numbers with commas as thousands separators
+    const formattedTotalCoded = this.totalCoded.toLocaleString();
+    const formattedPerSecond = (this.perSecond * 2).toLocaleString();
+
+    counter.innerText = formattedTotalCoded;
+    perSecondElement.innerText = formattedPerSecond;
   }
+
 }
