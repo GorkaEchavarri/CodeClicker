@@ -13,8 +13,14 @@
  @import "components/stats";
  @import "components/circles";
  @import "components/random_images";
+ @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 
  h1, h2, h3, h4, h5, h6, p {
   color: #2cfa1f;
+  font-family: 'Roboto Mono', monospace;
+}
+
+body {
+  font-family: 'Roboto Mono', monospace;
 }
