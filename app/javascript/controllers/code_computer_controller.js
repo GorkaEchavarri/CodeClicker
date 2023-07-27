@@ -28,20 +28,21 @@ export default class extends Controller {
       // Call the code() function to refresh your code
       this.generateLines();
       // Every half second (500)
-    }, 500);
+    }, 100);
   }
 
   code() {
     const counter = document.getElementById("total-coded");
     const junior = document.getElementById("junior");
     const manually_coded = document.getElementById("manually-coded");
+    const notification = document.getElementById("manual-code-notification");
 
     this.totalCoded += 1;
     this.manually_coded += 1;
     manually_coded.innerText = this.manually_coded
     // To make visible first item in store
     junior.style.visibility = "visible";
-    counter.innerText = this.totalCoded
+    counter.innerText = this.totalCoded.toFixed(2)
   }
 
   hireJunior() {
@@ -68,10 +69,11 @@ export default class extends Controller {
     juniorImage.style.top = randomY + 'px';
 
     if (this.totalCoded >= 25) {
-      this.perSecond += 0.25;
+      // its suppode to be perSecond += 0.05
+      this.perSecond += 0.05;
       this.totalCoded -= 25;
       this.totalJuniors += 1;
-      perSecond.innerText = this.perSecond * 2
+      // For stats
       totalJuniors.innerText = this.totalJuniors
       codingJuniors.innerText = this.totalJuniors * 0.5
       // To make visible next item in store
@@ -107,10 +109,9 @@ export default class extends Controller {
     seniorImage.style.top = randomY + 'px';
 
     if (this.totalCoded >= 50) {
-      this.perSecond += 0.5;
+      this.perSecond += 0.1;
       this.totalCoded -= 50;
       this.totalSeniors += 1;
-      perSecond.innerText = this.perSecond * 2
       totalSeniors.innerText = this.totalSeniors
       codingSeniors.innerText = this.totalSeniors * 1
       // To make visible next item in store
@@ -146,10 +147,9 @@ export default class extends Controller {
     startupImage.style.top = randomY + 'px';
 
     if (this.totalCoded >= 150) {
-      this.perSecond += 1.5;
+      this.perSecond += 0.3;
       this.totalCoded -= 150;
       this.totalStartups += 1;
-      perSecond.innerText = this.perSecond * 2
       totalStartups.innerText = this.totalStartups
       codingStartups.innerText = this.totalStartups * 3
       // To make visible next item in store
@@ -185,10 +185,9 @@ export default class extends Controller {
     companyImage.style.top = randomY + 'px';
 
     if (this.totalCoded >= 450) {
-      this.perSecond += 3;
+      this.perSecond += 0.6;
       this.totalCoded -= 450;
       this.totalCompanies += 1;
-      perSecond.innerText = this.perSecond * 2
       totalCompanies.innerText = this.totalCompanies
       codingCompanies.innerText = this.totalCompanies * 6
       // To make visible next item in store
@@ -224,10 +223,9 @@ export default class extends Controller {
     bigTechImage.style.top = randomY + 'px';
 
     if (this.totalCoded >= 1350) {
-      this.perSecond += 9;
+      this.perSecond += 1.8;
       this.totalCoded -= 1350;
       this.totalBigtechs += 1;
-      perSecond.innerText = this.perSecond * 2
       totalBigtechs.innerText = this.totalBigtechs
       codingBigtechs.innerText = this.totalBigtechs * 18
       // To make visible next item in store
@@ -263,10 +261,9 @@ export default class extends Controller {
     quantumComputerImage.style.top = randomY + 'px';
 
     if (this.totalCoded >= 5000) {
-      this.perSecond += 25;
+      this.perSecond += 5;
       this.totalCoded -= 5000;
       this.totalQuantum += 1;
-      perSecond.innerText = this.perSecond * 2
       totalQuantum.innerText = this.totalQuantum
       codingQuantum.innerText = this.totalQuantum * 50
       // To make visible next item in store
@@ -302,10 +299,9 @@ export default class extends Controller {
     AIImage.style.top = randomY + 'px';
 
     if (this.totalCoded >= 20000) {
-      this.perSecond += 100;
+      this.perSecond += 20;
       this.totalCoded -= 20000;
       this.totalAIs += 1;
-      perSecond.innerText = this.perSecond * 2
       totalAIs.innerText = this.totalAIs
       codingais.innerText = this.totalAIs * 200
       // To make visible next item in store
@@ -341,10 +337,9 @@ export default class extends Controller {
     codingStarImage.style.top = randomY + 'px';
 
     if (this.totalCoded >= 100000) {
-      this.perSecond += 400;
+      this.perSecond += 80;
       this.totalCoded -= 100000;
       this.totalStars += 1;
-      perSecond.innerText = this.perSecond * 2
 
       totalStars.innerText = this.totalStars
       codingStars.innerText = this.totalStars * 800
@@ -380,10 +375,10 @@ export default class extends Controller {
     architectImage.style.top = randomY + 'px';
 
     if (this.totalCoded >= 500000) {
-      this.perSecond += 1000;
+      this.perSecond += 200;
       this.totalCoded -= 500000;
       this.totalArchitects += 1;
-      perSecond.innerText = this.perSecond * 2
+
       totalArchitects.innerText = this.totalArchitects
       codingArchitects.innerText = this.totalArchitects * 2000
       // Append the image to the container
@@ -400,8 +395,8 @@ export default class extends Controller {
     this.totalCoded += this.perSecond;
 
     // Format the numbers with commas as thousands separators
-    const formattedTotalCoded = this.totalCoded.toLocaleString();
-    const formattedPerSecond = (this.perSecond * 2).toLocaleString();
+    const formattedTotalCoded = this.totalCoded.toFixed(2).toLocaleString();
+    const formattedPerSecond = (this.perSecond * 10).toLocaleString();
 
     counter.innerText = formattedTotalCoded;
     perSecondElement.innerText = formattedPerSecond;
