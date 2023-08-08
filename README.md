@@ -1,10 +1,12 @@
 # CodeClicker
 
-Incremental online game where you click on a computer to earn lines of code and later you can hire developers to code for you or even startups and big techs.
+Incremental game where you click on a computer to earn lines of code and later you can hire developers to code for you or even startups and big techs.
 
 ## Description
 
 The game, which is heavily influenced by Cookie Clicker, is created from scratch using Ruby on Rails and vanilla JavaScript.
+
+## Screenshots
 
 ## Getting Started
 
@@ -19,7 +21,7 @@ No installation needed
 
 ### Executing program
 
-Download the app and run it in localhost
+Download the app and run it in localhost.
 
 ## Help
 
@@ -32,14 +34,10 @@ command to run if program contains helper info
 
 Contributors names and contact info
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+Gorka Echavarri
 
 ## Version History
 
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
 * 0.1
     * Initial Release
 
@@ -50,8 +48,4 @@ This project is licensed under the [NAME HERE] License - see the LICENSE.md file
 ## Acknowledgments
 
 Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+
