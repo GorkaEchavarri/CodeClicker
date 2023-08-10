@@ -1,0 +1,25 @@
+.not-enough-message {
+  color: red;
+  position: absolute;
+  font-size: 80px;
+  left: 300px;
+  top: 300px;
+  visibility: hidden;
+  animation: fade-up-animation 1.5s linear 0s alternate;
+  animation-play-state: paused;
+}
+
+// @keyframes fade-up-animation {
+//   from {
+//     transform: translateY(0);
+//     opacity: 1;
+//   }
+//   to {
+//     transform: translateY(-100px);
+//     opacity: 0;
+//   }
+// }
+
+// .animate-fade-up {
+//   animation-play-state: running; /* Start the animation */
+// }
