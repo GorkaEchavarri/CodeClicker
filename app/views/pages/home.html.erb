@@ -1,4 +1,8 @@
 <div class="big-container" data-controller="code-computer">
+  <%# This is a test text %>
+<div>
+  <p class="not-enough-message">Not enough coded!</p>
+</div>
 
   <div class="container">
     <h4 class="user-bar"><%= current_user.username %>'s coding </h4>
@@ -9,15 +13,15 @@
     </div>
     <div class="computer">
     <div class="circles">
-      <div class="circle1"></div>
-      <div class="circle2"></div>
-      <div class="circle3"></div>
       <img
         src="https://res.cloudinary.com/dgqqot40q/image/upload/v1688122247/computer1_pqknbu.png"
         alt="80s computer pixel art"
         class="computer-image"
         data-action="click->code-computer#code"
       />
+      <div class="circle1"></div>
+      <div class="circle2"></div>
+      <div class="circle3"></div>
     </div>
     </div>
     <div class="text-center" style="margin-top: 4rem">

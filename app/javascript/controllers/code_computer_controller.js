@@ -50,6 +50,7 @@ export default class extends Controller {
     const codingJuniors = document.getElementById("coding-juniors");
     const senior = document.getElementById("senior");
     const juniorStatText = document.getElementById("stats-text-juniors");
+    const notEnoughMessage = document.querySelector(".not-enough-message");
 
     // Create a random junior image
     const juniorImage = document.createElement('img');
@@ -82,7 +83,7 @@ export default class extends Controller {
       container.appendChild(juniorImage);
     } else {
       console.log("Not enought coded")
-    }
+      }
   }
 
   hireSenior() {
