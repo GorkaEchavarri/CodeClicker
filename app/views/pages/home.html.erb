@@ -1,8 +1,4 @@
 <div class="big-container" data-controller="code-computer">
-  <%# This is a test text %>
-<div>
-  <p class="not-enough-message">Not enough coded!</p>
-</div>
 
   <div class="container">
     <h4 class="user-bar"><%= current_user.username %>'s coding </h4>
@@ -27,6 +23,9 @@
     <div class="text-center" style="margin-top: 4rem">
       <button type="button" class="btn btn-outline-success">Upgrade Computer (Cost 3.500)</button>
     </div>
+
+
+
   </div>
 
   <div class="container">
@@ -46,6 +45,11 @@
       </p>
       </div>
       <div id="pics-container">
+
+    <div id="messageContainer">
+    <p class="hidden" id="messageText">Not Enough Coded!</p>
+    </div>
+
       </div>
   </div>
 

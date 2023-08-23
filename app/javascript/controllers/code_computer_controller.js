@@ -23,11 +23,11 @@ export default class extends Controller {
     this.totalArchitects = 0;
   }
 
+
   startRefreshing() {
     setInterval(() => {
-      // Call the code() function to refresh your code
       this.generateLines();
-      // Every half second (500)
+      // ten times per second (100)
     }, 100);
   }
 
@@ -82,7 +82,19 @@ export default class extends Controller {
       // Append the image to the container
       container.appendChild(juniorImage);
     } else {
-      console.log("Not enought coded")
+      //Show message of not enough coded
+        const messageContainer = document.getElementById("messageText");
+
+        messageContainer.classList.remove("hidden");
+        setTimeout(() => {
+            messageContainer.style.opacity = "0";
+            messageContainer.style.transform = "translateY(-30px)";
+            setTimeout(() => {
+                messageContainer.classList.add("hidden");
+                messageContainer.style.opacity = "1";
+                messageContainer.style.transform = "translateY(0)";
+            }, 2000);
+        }, 100);
       }
   }
 
@@ -122,7 +134,19 @@ export default class extends Controller {
       // Append the image to the container
       container.appendChild(seniorImage);
     } else {
-      console.log("Not enought coded")
+      //Show message of not enough coded
+      const messageContainer = document.getElementById("messageText");
+
+      messageContainer.classList.remove("hidden");
+      setTimeout(() => {
+          messageContainer.style.opacity = "0";
+          messageContainer.style.transform = "translateY(-30px)";
+          setTimeout(() => {
+              messageContainer.classList.add("hidden");
+              messageContainer.style.opacity = "1";
+              messageContainer.style.transform = "translateY(0)";
+          }, 2000);
+      }, 100);
     }
   }
 
@@ -162,7 +186,19 @@ export default class extends Controller {
       // Append the image to the container
       container.appendChild(startupImage);
     } else {
-      console.log("Not enought coded")
+      //Show message of not enough coded
+      const messageContainer = document.getElementById("messageText");
+
+      messageContainer.classList.remove("hidden");
+      setTimeout(() => {
+          messageContainer.style.opacity = "0";
+          messageContainer.style.transform = "translateY(-30px)";
+          setTimeout(() => {
+              messageContainer.classList.add("hidden");
+              messageContainer.style.opacity = "1";
+              messageContainer.style.transform = "translateY(0)";
+          }, 2000);
+      }, 100);
     }
   }
 
@@ -202,7 +238,19 @@ export default class extends Controller {
       // Append the image to the container
       container.appendChild(companyImage);
     } else {
-      console.log("Not enought coded")
+      //Show message of not enough coded
+      const messageContainer = document.getElementById("messageText");
+
+      messageContainer.classList.remove("hidden");
+      setTimeout(() => {
+          messageContainer.style.opacity = "0";
+          messageContainer.style.transform = "translateY(-30px)";
+          setTimeout(() => {
+              messageContainer.classList.add("hidden");
+              messageContainer.style.opacity = "1";
+              messageContainer.style.transform = "translateY(0)";
+          }, 2000);
+      }, 100);
     }
   }
 
@@ -242,7 +290,19 @@ export default class extends Controller {
       // Append the image to the container
       container.appendChild(bigTechImage);
     } else {
-      console.log("Not enought coded")
+      //Show message of not enough coded
+      const messageContainer = document.getElementById("messageText");
+
+      messageContainer.classList.remove("hidden");
+      setTimeout(() => {
+          messageContainer.style.opacity = "0";
+          messageContainer.style.transform = "translateY(-30px)";
+          setTimeout(() => {
+              messageContainer.classList.add("hidden");
+              messageContainer.style.opacity = "1";
+              messageContainer.style.transform = "translateY(0)";
+          }, 2000);
+      }, 100);
     }
   }
 
@@ -282,7 +342,19 @@ export default class extends Controller {
       // Append the image to the container
       container.appendChild(quantumComputerImage);
     } else {
-      console.log("Not enought coded")
+      //Show message of not enough coded
+      const messageContainer = document.getElementById("messageText");
+
+      messageContainer.classList.remove("hidden");
+      setTimeout(() => {
+          messageContainer.style.opacity = "0";
+          messageContainer.style.transform = "translateY(-30px)";
+          setTimeout(() => {
+              messageContainer.classList.add("hidden");
+              messageContainer.style.opacity = "1";
+              messageContainer.style.transform = "translateY(0)";
+          }, 2000);
+      }, 100);
     }
   }
 
@@ -322,7 +394,19 @@ export default class extends Controller {
       // Append the image to the container
       container.appendChild(AIImage);
     } else {
-      console.log("Not enought coded")
+      //Show message of not enough coded
+      const messageContainer = document.getElementById("messageText");
+
+      messageContainer.classList.remove("hidden");
+      setTimeout(() => {
+          messageContainer.style.opacity = "0";
+          messageContainer.style.transform = "translateY(-30px)";
+          setTimeout(() => {
+              messageContainer.classList.add("hidden");
+              messageContainer.style.opacity = "1";
+              messageContainer.style.transform = "translateY(0)";
+          }, 2000);
+      }, 100);
     }
   }
 
@@ -362,7 +446,19 @@ export default class extends Controller {
       // Append the image to the container
       container.appendChild(codingStarImage);
     } else {
-      console.log("Not enought coded")
+      //Show message of not enough coded
+      const messageContainer = document.getElementById("messageText");
+
+      messageContainer.classList.remove("hidden");
+      setTimeout(() => {
+          messageContainer.style.opacity = "0";
+          messageContainer.style.transform = "translateY(-30px)";
+          setTimeout(() => {
+              messageContainer.classList.add("hidden");
+              messageContainer.style.opacity = "1";
+              messageContainer.style.transform = "translateY(0)";
+          }, 2000);
+      }, 100);
     }
   }
 
@@ -399,7 +495,19 @@ export default class extends Controller {
       // Append the image to the container
       container.appendChild(architectImage);
     } else {
-      console.log("Not enought coded")
+      //Show message of not enough coded
+      const messageContainer = document.getElementById("messageText");
+
+      messageContainer.classList.remove("hidden");
+      setTimeout(() => {
+          messageContainer.style.opacity = "0";
+          messageContainer.style.transform = "translateY(-40px)";
+          setTimeout(() => {
+              messageContainer.classList.add("hidden");
+              messageContainer.style.opacity = "1";
+              messageContainer.style.transform = "translateY(0)";
+          }, 3000);
+      }, 1000);
     }
   }
 
