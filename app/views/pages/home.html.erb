@@ -1,7 +1,11 @@
 <div class="big-container" data-controller="code-computer">
 
   <div class="container">
+  <% if current_user && current_user.username %>
     <h4 class="user-bar"><%= current_user.username %>'s coding </h4>
+    <% else %>
+    <h4 class="user-bar">Player's coding </h4>
+    <% end %>
     <div class="coded">
         <h6> <strong id="total-coded">0</strong> lines coded
         <br>
@@ -23,9 +27,6 @@
     <div class="text-center" style="margin-top: 4rem">
       <button type="button" class="btn btn-outline-success">Upgrade Computer (Cost 3.500)</button>
     </div>
-
-
-
   </div>
 
   <div class="container">
