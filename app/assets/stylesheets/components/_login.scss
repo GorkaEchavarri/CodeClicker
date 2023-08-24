@@ -1,0 +1,17 @@
+.login-box {
+  background-color: rgba(0, 55, 255, 0.583);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.login-page {
+  background: url("https://res.cloudinary.com/dgqqot40q/image/upload/v1692880797/background-image_blurry_uqdke2.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
