@@ -4,8 +4,9 @@ export default class extends Controller {
   static targets = ["output"]
 
   connect() {
-    console.log("Hello from our first Stimulus controller");
+    this.initialize();
     this.startRefreshing();
+    this.generateLines(); // Call generateLines after the elements are initialized.
   }
 
   initialize() {
@@ -515,7 +516,8 @@ export default class extends Controller {
     const counter = document.getElementById("total-coded");
     const perSecondElement = document.getElementById("per-second");
 
-    this.totalCoded += this.perSecond;
+    if (counter && perSecondElement) {
+      this.totalCoded += this.perSecond;
 
     // Format the numbers with commas as thousands separators
     const formattedTotalCoded = this.totalCoded.toFixed(2).toLocaleString();
@@ -523,6 +525,6 @@ export default class extends Controller {
 
     counter.innerText = formattedTotalCoded;
     perSecondElement.innerText = formattedPerSecond;
+    }
   }
-
 }
