@@ -519,12 +519,19 @@ export default class extends Controller {
     if (counter && perSecondElement) {
       this.totalCoded += this.perSecond;
 
-    // Format the numbers with commas as thousands separators
-    const formattedTotalCoded = this.totalCoded.toFixed(2).toLocaleString();
-    const formattedPerSecond = (this.perSecond * 10).toLocaleString();
+      //To format the numbers
+      if (this.totalCoded < 1000) {
+        const formattedTotalCoded = this.totalCoded.toFixed(2).toLocaleString();
+        counter.innerText = formattedTotalCoded;
+      } else {
+        counter.innerText = this.totalCoded.toLocaleString(undefined, {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        });;
+      }
 
-    counter.innerText = formattedTotalCoded;
-    perSecondElement.innerText = formattedPerSecond;
+      const formattedPerSecond = (this.perSecond * 10).toLocaleString();
+      perSecondElement.innerText = formattedPerSecond;
     }
   }
 }
