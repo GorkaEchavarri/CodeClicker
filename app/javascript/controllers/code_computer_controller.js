@@ -36,7 +36,6 @@ export default class extends Controller {
     const counter = document.getElementById("total-coded");
     const junior = document.getElementById("junior");
     const manually_coded = document.getElementById("manually-coded");
-    const notification = document.getElementById("manual-code-notification");
 
     this.totalCoded += 1;
     this.manually_coded += 1;
@@ -46,12 +45,27 @@ export default class extends Controller {
     counter.innerText = this.totalCoded.toFixed(2)
   }
 
+  //Function to show message of "Not enough coded"
+  showMessage() {
+    const messageContainer = document.getElementById("messageText");
+
+    messageContainer.classList.remove("hidden");
+    setTimeout(() => {
+        messageContainer.style.opacity = "0";
+        messageContainer.style.transform = "translateY(-30px)";
+        setTimeout(() => {
+            messageContainer.classList.add("hidden");
+            messageContainer.style.opacity = "1";
+            messageContainer.style.transform = "translateY(0)";
+        }, 2000);
+    }, 100);
+  }
+
   hireJunior() {
     const totalJuniors = document.getElementById("total-juniors");
     const codingJuniors = document.getElementById("coding-juniors");
     const senior = document.getElementById("senior");
     const juniorStatText = document.getElementById("stats-text-juniors");
-    const notEnoughMessage = document.querySelector(".not-enough-message");
 
     // Create a random junior image
     const juniorImage = document.createElement('img');
@@ -74,7 +88,7 @@ export default class extends Controller {
       this.perSecond += 0.05;
       this.totalCoded -= 25;
       this.totalJuniors += 1;
-      // For stats
+      // For stats text
       totalJuniors.innerText = this.totalJuniors
       codingJuniors.innerText = this.totalJuniors * 0.5
       juniorStatText.style.visibility = "visible";
@@ -84,18 +98,7 @@ export default class extends Controller {
       container.appendChild(juniorImage);
     } else {
       //Show message of not enough coded
-        const messageContainer = document.getElementById("messageText");
-
-        messageContainer.classList.remove("hidden");
-        setTimeout(() => {
-            messageContainer.style.opacity = "0";
-            messageContainer.style.transform = "translateY(-30px)";
-            setTimeout(() => {
-                messageContainer.classList.add("hidden");
-                messageContainer.style.opacity = "1";
-                messageContainer.style.transform = "translateY(0)";
-            }, 2000);
-        }, 100);
+        this.showMessage();
       }
   }
 
@@ -136,18 +139,7 @@ export default class extends Controller {
       container.appendChild(seniorImage);
     } else {
       //Show message of not enough coded
-      const messageContainer = document.getElementById("messageText");
-
-      messageContainer.classList.remove("hidden");
-      setTimeout(() => {
-          messageContainer.style.opacity = "0";
-          messageContainer.style.transform = "translateY(-30px)";
-          setTimeout(() => {
-              messageContainer.classList.add("hidden");
-              messageContainer.style.opacity = "1";
-              messageContainer.style.transform = "translateY(0)";
-          }, 2000);
-      }, 100);
+      this.showMessage();
     }
   }
 
@@ -188,18 +180,7 @@ export default class extends Controller {
       container.appendChild(startupImage);
     } else {
       //Show message of not enough coded
-      const messageContainer = document.getElementById("messageText");
-
-      messageContainer.classList.remove("hidden");
-      setTimeout(() => {
-          messageContainer.style.opacity = "0";
-          messageContainer.style.transform = "translateY(-30px)";
-          setTimeout(() => {
-              messageContainer.classList.add("hidden");
-              messageContainer.style.opacity = "1";
-              messageContainer.style.transform = "translateY(0)";
-          }, 2000);
-      }, 100);
+      this.showMessage();
     }
   }
 
@@ -240,18 +221,7 @@ export default class extends Controller {
       container.appendChild(companyImage);
     } else {
       //Show message of not enough coded
-      const messageContainer = document.getElementById("messageText");
-
-      messageContainer.classList.remove("hidden");
-      setTimeout(() => {
-          messageContainer.style.opacity = "0";
-          messageContainer.style.transform = "translateY(-30px)";
-          setTimeout(() => {
-              messageContainer.classList.add("hidden");
-              messageContainer.style.opacity = "1";
-              messageContainer.style.transform = "translateY(0)";
-          }, 2000);
-      }, 100);
+      this.showMessage();
     }
   }
 
@@ -292,18 +262,7 @@ export default class extends Controller {
       container.appendChild(bigTechImage);
     } else {
       //Show message of not enough coded
-      const messageContainer = document.getElementById("messageText");
-
-      messageContainer.classList.remove("hidden");
-      setTimeout(() => {
-          messageContainer.style.opacity = "0";
-          messageContainer.style.transform = "translateY(-30px)";
-          setTimeout(() => {
-              messageContainer.classList.add("hidden");
-              messageContainer.style.opacity = "1";
-              messageContainer.style.transform = "translateY(0)";
-          }, 2000);
-      }, 100);
+      this.showMessage();
     }
   }
 
@@ -344,18 +303,7 @@ export default class extends Controller {
       container.appendChild(quantumComputerImage);
     } else {
       //Show message of not enough coded
-      const messageContainer = document.getElementById("messageText");
-
-      messageContainer.classList.remove("hidden");
-      setTimeout(() => {
-          messageContainer.style.opacity = "0";
-          messageContainer.style.transform = "translateY(-30px)";
-          setTimeout(() => {
-              messageContainer.classList.add("hidden");
-              messageContainer.style.opacity = "1";
-              messageContainer.style.transform = "translateY(0)";
-          }, 2000);
-      }, 100);
+      this.showMessage();
     }
   }
 
@@ -396,18 +344,7 @@ export default class extends Controller {
       container.appendChild(AIImage);
     } else {
       //Show message of not enough coded
-      const messageContainer = document.getElementById("messageText");
-
-      messageContainer.classList.remove("hidden");
-      setTimeout(() => {
-          messageContainer.style.opacity = "0";
-          messageContainer.style.transform = "translateY(-30px)";
-          setTimeout(() => {
-              messageContainer.classList.add("hidden");
-              messageContainer.style.opacity = "1";
-              messageContainer.style.transform = "translateY(0)";
-          }, 2000);
-      }, 100);
+      this.showMessage();
     }
   }
 
@@ -448,18 +385,7 @@ export default class extends Controller {
       container.appendChild(codingStarImage);
     } else {
       //Show message of not enough coded
-      const messageContainer = document.getElementById("messageText");
-
-      messageContainer.classList.remove("hidden");
-      setTimeout(() => {
-          messageContainer.style.opacity = "0";
-          messageContainer.style.transform = "translateY(-30px)";
-          setTimeout(() => {
-              messageContainer.classList.add("hidden");
-              messageContainer.style.opacity = "1";
-              messageContainer.style.transform = "translateY(0)";
-          }, 2000);
-      }, 100);
+      this.showMessage();
     }
   }
 
@@ -497,18 +423,7 @@ export default class extends Controller {
       container.appendChild(architectImage);
     } else {
       //Show message of not enough coded
-      const messageContainer = document.getElementById("messageText");
-
-      messageContainer.classList.remove("hidden");
-      setTimeout(() => {
-          messageContainer.style.opacity = "0";
-          messageContainer.style.transform = "translateY(-40px)";
-          setTimeout(() => {
-              messageContainer.classList.add("hidden");
-              messageContainer.style.opacity = "1";
-              messageContainer.style.transform = "translateY(0)";
-          }, 3000);
-      }, 1000);
+      this.showMessage();
     }
   }
 
@@ -519,12 +434,19 @@ export default class extends Controller {
     if (counter && perSecondElement) {
       this.totalCoded += this.perSecond;
 
-    // Format the numbers with commas as thousands separators
-    const formattedTotalCoded = this.totalCoded.toFixed(2).toLocaleString();
-    const formattedPerSecond = (this.perSecond * 10).toLocaleString();
+      //To format the numbers
+      if (this.totalCoded < 1000) {
+        const formattedTotalCoded = this.totalCoded.toFixed(2).toLocaleString();
+        counter.innerText = formattedTotalCoded;
+      } else {
+        counter.innerText = this.totalCoded.toLocaleString(undefined, {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        });;
+      }
 
-    counter.innerText = formattedTotalCoded;
-    perSecondElement.innerText = formattedPerSecond;
+      const formattedPerSecond = (this.perSecond * 10).toLocaleString();
+      perSecondElement.innerText = formattedPerSecond;
     }
   }
 }
