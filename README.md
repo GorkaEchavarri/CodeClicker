@@ -6,9 +6,13 @@ Incremental game where you click on a computer to earn lines of code and later y
 
 The game, which is heavily influenced by Cookie Clicker, is created from scratch using Ruby on Rails and vanilla JavaScript.
 
+## How I worked in this project
+
+How I worked in this project
+
 ## Screenshots
 
-## Getting Started
+## How to Navigate 
 
 ### Dependencies
 
@@ -21,7 +25,10 @@ No installation needed
 
 ### Executing program
 
-Download the app and run it in localhost.
+Download the app and run it in localhost with:
+```
+rails s
+```
 
 ## Help
 
