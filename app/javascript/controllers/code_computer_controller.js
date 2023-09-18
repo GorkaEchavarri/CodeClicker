@@ -6,7 +6,7 @@ export default class extends Controller {
   connect() {
     this.initialize();
     this.startRefreshing();
-    this.generateLines(); // Call generateLines after the elements are initialized.
+    this.generateLines();
   }
 
   initialize() {
@@ -24,7 +24,7 @@ export default class extends Controller {
     this.totalArchitects = 0;
   }
 
-
+  // refresher that creates all the lines of code and displays them
   startRefreshing() {
     setInterval(() => {
       this.generateLines();
@@ -32,6 +32,7 @@ export default class extends Controller {
     }, 100);
   }
 
+  // By clicking the big computer you manually code one line
   code() {
     const counter = document.getElementById("total-coded");
     const junior = document.getElementById("junior");
@@ -45,7 +46,7 @@ export default class extends Controller {
     counter.innerText = this.totalCoded.toFixed(2)
   }
 
-  //Function to show message of "Not enough coded"
+  //Show message "Not enough coded" in case the user hires/buys an item and there is not enought coded for it
   showMessage() {
     const messageContainer = document.getElementById("messageText");
 
@@ -427,6 +428,7 @@ export default class extends Controller {
     }
   }
 
+  // generate and displays the total lines and the per second stats
   generateLines() {
     const counter = document.getElementById("total-coded");
     const perSecondElement = document.getElementById("per-second");
