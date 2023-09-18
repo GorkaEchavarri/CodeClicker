@@ -15,6 +15,11 @@ The app also uses the Rails Device for user authentification although this means
 
 ## Screenshots
 
+<img src="app/assets/images/screenshots/Screenshot-sign-up.png" width="600">
+<img src="app/assets/images/screenshots/Screenshot-layout1.png" width="600">
+<img src="app/assets/images/screenshots/Screenshot-layout2.png" width="600">
+
+
 ## How to Navigate 
 
 The main JS logic running all the backend features can be found in the main controller in:
