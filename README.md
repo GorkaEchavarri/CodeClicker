@@ -18,7 +18,12 @@ The app also uses the Rails Device for user authentification although this means
 ## How to Navigate 
 
 The main JS logic running all the backend features can be found in the main controller in:
+
 **app>javascript>controllers>code_computer_controller.js**
+
+The layout file showing all the HTML and the way the app will is displayed can be found in:
+
+**app>views>pages>home.html.erb**
 
 ### Dependencies
 
