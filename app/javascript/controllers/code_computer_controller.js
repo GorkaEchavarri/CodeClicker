@@ -2,6 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
   static targets = ["output"]
+  refreshingInterval = null;
 
   connect() {
     this.initialize();
@@ -26,7 +27,8 @@ export default class extends Controller {
 
   // refresher that creates all the lines of code and displays them
   startRefreshing() {
-    setInterval(() => {
+    // Store the interval reference in the refreshingInterval property
+    this.refreshingInterval = setInterval(() => {
       this.generateLines();
       // ten times per second (100)
     }, 100);
@@ -38,12 +40,29 @@ export default class extends Controller {
     const junior = document.getElementById("junior");
     const manually_coded = document.getElementById("manually-coded");
 
-    this.totalCoded += 1;
+    this.totalCoded += 100000;
     this.manually_coded += 1;
     manually_coded.innerText = this.manually_coded
     // To make visible first item in store
     junior.style.visibility = "visible";
     counter.innerText = this.totalCoded.toFixed(2)
+
+    // When you reach one million lines of code you win the game
+    if (this.totalCoded >= 1000000) {
+      const winPopup = document.getElementById("winPopup");
+      winPopup.style.display = "block";
+
+      // Clear the refreshing interval
+      clearInterval(this.refreshingInterval);
+
+      // Add event listener to the "Reset the game" button
+      const resetButton = document.getElementById("resetButton");
+      resetButton.addEventListener("click", () => {
+        // Reload the page when the button is clicked
+        location.reload();
+      });
+    }
+
   }
 
   //Show message "Not enough coded" in case the user hires/buys an item and there is not enought coded for it
